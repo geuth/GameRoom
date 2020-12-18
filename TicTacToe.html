@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/lib.js"></script>
     <link rel="stylesheet" href="css/stylesheet.css">
@@ -17,7 +17,7 @@
 <body>
     <header>
         <h1>Game Room</h1>
-        <nav> 
+        <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="Hangman.html">Hangman</a></li>
@@ -27,6 +27,69 @@
             </ul>
         </nav>
     </header>
+
+    <div class="ticContainer">
+        <h1 class="title">Tic Tac Toe</h1>
+        <div class="containerBox">
+            <table>
+                <tr>
+                    <td>
+                        <h2 class="play box" id="one"></h2>
+                    </td>
+                    <td>
+                        <h2 class="play box " id="two"></h2>
+                    </td>
+                    <td>
+                        <h2 class="play box " id="three"></h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2 class="play box" id="four"></h2>
+                    </td>
+                    <td>
+                        <h2 class="play box" id="five"></h2>
+                    </td>
+                    <td>
+                        <h2 class="play box" id="six"></h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2 class="play box" id="seven"></h2>
+                    </td>
+                    <td>
+                        <h2 class="play box" id="eight"></h2>
+                    </td>
+                    <td>
+                        <h2 class="play box" id="nine"></h2>
+                    </td>
+                </tr>
+
+
+
+
+
+
+
+
+
+
+
+            </table>
+
+
+            <br />
+            <h1 class="message"></h1>
+            <br />
+            <h1 class="score">Player 1:</h1>
+            <h1 class="scorePlayerOne score">0</h1>
+            <br />
+            <h1 class="score">Player 2:</h1>
+            <h1 class="scorePlayerTwo score">0</h1>
+<br/>
+<input type="submit" value="Reset Score" class="resetScore">
+        </div>
 </body>
 
 </html>
