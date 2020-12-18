@@ -180,7 +180,7 @@ $(document).ready(function () {
                 if ((boxOne == "X" && boxTwo == "X" && boxThree == "X") ||
                     (boxOne == "X" && boxFive == "X" && boxNine == "X") ||
                     (boxOne == "X" && boxFour == "X" && boxSeven == "X") ||
-                    (boxTwo == "X" && boxFive == "X" && boxSeven == "X") ||
+                    (boxTwo == "X" && boxFive == "X" && boxEight == "X") ||
                     (boxThree == "X" && boxSix == "X" && boxNine == "X") ||
                     (boxThree == "X" && boxFive == "X" && boxSeven == "X") ||
                     (boxFour == "X" && boxFive == "X" && boxSix == "X") ||
@@ -205,7 +205,7 @@ $(document).ready(function () {
                 } else if ((boxOne == "O" && boxTwo == "O" && boxThree == "O") ||
                     (boxOne == "O" && boxFive == "O" && boxNine == "O") ||
                     (boxOne == "O" && boxFour == "O" && boxSeven == "O") ||
-                    (boxTwo == "O" && boxFive == "O" && boxSeven == "O") ||
+                    (boxTwo == "O" && boxFive == "O" && boxEight == "O") ||
                     (boxThree == "O" && boxSix == "O" && boxNine == "O") ||
                     (boxThree == "O" && boxFive == "O" && boxSeven == "O") ||
                     (boxFour == "O" && boxFive == "O" && boxSix == "O") ||

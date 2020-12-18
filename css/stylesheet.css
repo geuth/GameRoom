@@ -238,6 +238,7 @@ nav li a:hover {
 }
 .ticContainer table td{
     background-color: white;
+   font-size: 20px;
 }
 .ticContainer .title{
     color: white;
