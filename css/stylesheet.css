@@ -229,16 +229,22 @@ nav li a:hover {
     width: 400px;
     margin: auto;
     margin-top: 20px;
-    height: 520px;
+    height: 620px;
 
 }
 .ticContainer table{
     width: 100%;
     text-align: center;
 }
+.ticContainer table tr{
+    height:auto;
+   width: auto;
+}
 .ticContainer table td{
-    background-color: white;
+    background-color: rgb(221, 221, 221);
    font-size: 20px;
+   height:auto;
+   width: auto;
 }
 .ticContainer .title{
     color: white;
@@ -246,9 +252,10 @@ nav li a:hover {
 }
 
 .box{
-  
-    width: 70px;
-    height: 70px;
+  padding-top: 10px;
+    font-size: 30px;
+    width: 140px;
+    height: 90px;
     text-align: center;
     display: inline-block;
     color:black;
@@ -259,18 +266,18 @@ nav li a:hover {
     display: inline;
     
 }
-.resetScore{
+.resetGame{
     margin-left: 20px;
     margin-top: 10px;
     background-color: black;
     border-radius: 20px;
     height: 50px;
-    width: 110px;
+    width: 170px;
     font-size: 20px;
     color: white;
     border-color: white;
     font-family: 'Bungee Outline', cursive;
 }
-.resetScore:hover {
+.resetGame:hover {
     color: red;
 }
