@@ -263,7 +263,6 @@ $(document).ready(function () {
             $("#one h2").css("color", "blue");
             var indexOne = cross.indexOf("#one");
             cross.splice(indexOne, 1);
-            check();
             var randomVal = cross[Math.floor(Math.random() * cross.length)];
        
             $(randomVal +" h2").css("color", "red");
@@ -283,7 +282,6 @@ $(document).ready(function () {
             $("#two h2").css("color", "blue");
             var indexTwo = cross.indexOf("#two");
             cross.splice(indexTwo, 1);
-            check();
             var randomVal2 = cross[Math.floor(Math.random() * cross.length)];
             $(randomVal2+" h2").css("color", "red");
             $(randomVal2+" h2").text("O");
@@ -299,7 +297,7 @@ $(document).ready(function () {
             }
             $("#three h2").css("color", "blue");
             $("#three h2").text("X");
-            check();
+           
             var indexThree = cross.indexOf("#three");
             cross.splice(indexThree, 1);
             var randomVal3 = cross[Math.floor(Math.random() * cross.length)];
@@ -322,7 +320,7 @@ $(document).ready(function () {
 
             var indexFour = cross.indexOf("#four");
             cross.splice(indexFour, 1);
-            check();
+        
             var randomVal4 = cross[Math.floor(Math.random() * cross.length)];
             $(randomVal4+" h2").css("color", "red");
             $(randomVal4+" h2").text("O");
@@ -341,7 +339,7 @@ $(document).ready(function () {
 
             var indexFive = cross.indexOf("#five");
             cross.splice(indexFive, 1);
-            check();
+          
             var randomVal5 = cross[Math.floor(Math.random() * cross.length)];
             $(randomVal5+" h2").css("color", "red")
             $(randomVal5+" h2").text("O");
@@ -361,7 +359,7 @@ $(document).ready(function () {
 
             var indexSix = cross.indexOf("#six");
             cross.splice(indexSix, 1);
-            check();
+           
             var randomVal6 = cross[Math.floor(Math.random() * cross.length)];
             $(randomVal6+" h2").css("color", "red");
             $(randomVal6+" h2").text("O");
@@ -381,7 +379,7 @@ $(document).ready(function () {
 
             var indexSeven = cross.indexOf("#seven");
             cross.splice(indexSeven, 1);
-            check();
+         
             var randomVal7 = cross[Math.floor(Math.random() * cross.length)];
             $(randomVal7+" h2").css("color", "red");
             $(randomVal7+" h2").text("O");
@@ -401,7 +399,7 @@ $(document).ready(function () {
 
             var indexEight = cross.indexOf("#eight");
             cross.splice(indexEight, 1);
-            check();
+           
             var randomVal8 = cross[Math.floor(Math.random() * cross.length)];
             $(randomVal8+" h2").css("color", "red");
             $(randomVal8+" h2").text("O");
@@ -422,7 +420,7 @@ $(document).ready(function () {
 
             var indexNine = cross.indexOf("#nine");
             cross.splice(indexNine, 1);
-            check();
+            
             var randomVal9 = cross[Math.floor(Math.random() * cross.length)];
             $(randomVal9+" h2").css("color", "red");
             $(randomVal9+" h2").text("O");
