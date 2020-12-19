@@ -54,7 +54,37 @@ nav li a:hover {
 }
 
 /*Home Page*/
+.mainContent {
+    position: relative;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 140px;
+}
 
+.mainContent h1{
+    font-family: 'Langar', cursive;
+    margin: 10px;
+    opacity: 0.4;
+    padding: 50px;
+    display: inline-block;
+    height: 70px;
+    width: 310px;
+    background-color: rgb(78, 78, 78);
+}
+.mainContent h1:hover{
+    opacity: 1;
+    animation: blinker 1s linear infinite;
+    font-family: 'Bungee Outline', cursive;
+
+}
+.mainContent a{
+    color: white;
+    text-decoration: none;
+}
+.mainContent h1 a:visited{
+    color: white;
+}
 /*Hangman page*/
 
 .hangmanBox {
@@ -91,7 +121,7 @@ nav li a:hover {
 
 }
 
-.submit {
+.guessWord {
     margin-top: 10px;
     background-color: black;
     border-radius: 20px;
@@ -103,7 +133,7 @@ nav li a:hover {
     font-family: 'Bungee Outline', cursive;
 }
 
-.submit:hover {
+.guessWord:hover {
     color: red;
 }
 
@@ -136,12 +166,14 @@ nav li a:hover {
     text-align: center;
     margin: auto;
 }
-.hangmanDraw h1{
+
+.hangmanDraw h1 {
     margin: auto;
     text-align: center;
-    padding:10px;
+    padding: 10px;
 }
-.hangmanDraw{
+
+.hangmanDraw {
     padding: 10px;
     margin: auto;
 }
@@ -156,10 +188,10 @@ nav li a:hover {
     margin: auto;
     margin-top: 20px;
     height: 280px;
-
+    margin-bottom: 20px;
 }
 
-.guessNumBox  h1 {
+.guessNumBox h1 {
     color: white;
 }
 
@@ -220,53 +252,63 @@ nav li a:hover {
     color: white;
 
 }
+
 /*Tic Tac Toe*/
-.ticContainer{
+.ticContainer {
     text-align: center;
     padding: 40px;
     border-radius: 20px;
     background-color: grey;
-    width: 400px;
+    width: 500px;
     margin: auto;
     margin-top: 20px;
-    height: 620px;
-
+    height: 520px;
+    margin-bottom: 20px;
 }
-.ticContainer table{
+
+.ticContainer table {
     width: 100%;
     text-align: center;
+    border-spacing: 4px;
+    background-color: rgb(53, 16, 16);
 }
-.ticContainer table tr{
-    height:auto;
-   width: auto;
+
+.ticContainer table tr {
+    height: auto;
+    width: auto;
 }
-.ticContainer table td{
+
+.ticContainer table td {
     background-color: rgb(221, 221, 221);
-   font-size: 20px;
-   height:auto;
-   width: auto;
+    font-size: 20px;
+    height: 105px;
+    width: 140px;
 }
-.ticContainer .title{
+
+.ticContainer .title {
     color: white;
     padding: 10px;
 }
 
-.box{
-  padding-top: 10px;
-    font-size: 30px;
+.box {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 40px;
     width: 140px;
-    height: 90px;
+    font-size: 30px;
     text-align: center;
     display: inline-block;
-    color:black;
-   
+    color: black;
+
 }
 
-.score{
+.score {
     display: inline;
-    
+    color: white;
+    padding: 9px;
 }
-.resetGame{
+
+.resetGame {
     margin-left: 20px;
     margin-top: 10px;
     background-color: black;
@@ -278,6 +320,70 @@ nav li a:hover {
     border-color: white;
     font-family: 'Bungee Outline', cursive;
 }
+
 .resetGame:hover {
     color: red;
+}
+
+.resultDisplay {
+    height: 200px;
+    color: white;
+    animation: pulse 1.5s linear infinite;
+    border-radius: 10px;
+}
+
+.resultDisplay h1 {
+    padding: 70px;
+    text-shadow: 2px 2px black;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(.5);
+        background-color: navy;
+        color: bisque;
+
+    }
+
+    25% {
+        background-color: rgb(194, 218, 87);
+        color: rgb(166, 192, 93);
+    }
+
+    50% {
+        background-color: rgb(182, 49, 175);
+        color: rgb(196, 117, 117);
+    }
+
+    75% {
+        background-color: rgb(94, 139, 87);
+        color: rgb(77, 30, 30);
+    }
+
+    100% {
+        transform: scale(0.8);
+        background-color: rgb(202, 77, 77);
+        color: rgb(145, 38, 38);
+    }
+}
+@keyframes blinker {
+    0% {
+ 
+        background-color: rgb(41, 41, 41);
+        color: rgb(163, 153, 141);
+
+    }
+    50% {
+ 
+        background-color: rgb(250, 0, 0);
+        color: rgb(163, 153, 141);
+
+    }
+    100% {
+ 
+        background-color: rgb(61, 50, 50);
+        color: rgb(163, 153, 141);
+
+    }
+    
 }

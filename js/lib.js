@@ -59,6 +59,7 @@ $(document).ready(function () {
 
             if (wordEntered.toLowerCase() == word.toLowerCase()) {
                 hiddenWord = arrayWord;
+                
                 $(".result").text("You won!");
             } else if (hiddenWord.includes(wordEntered.toLowerCase())) {
                 $(".result").text("You have already entered this letter!");
@@ -203,15 +204,15 @@ $(document).ready(function () {
         var player2 = 0;
 
         function check() {
-            var boxOne = $("#one ").text();
-            var boxTwo = $("#two ").text();
-            var boxThree = $("#three ").text();
-            var boxFour = $("#four ").text();
-            var boxFive = $("#five ").text();
-            var boxSix = $("#six ").text();
-            var boxSeven = $("#seven ").text();
-            var boxEight = $("#eight ").text();
-            var boxNine = $("#nine ").text();
+            var boxOne = $("#one h2").text();
+            var boxTwo = $("#two h2").text();
+            var boxThree = $("#three h2").text();
+            var boxFour = $("#four h2").text();
+            var boxFive = $("#five h2").text();
+            var boxSix = $("#six h2").text();
+            var boxSeven = $("#seven h2").text();
+            var boxEight = $("#eight h2").text();
+            var boxNine = $("#nine h2").text();
 
             if ((boxOne == "X" && boxTwo == "X" && boxThree == "X") ||
                 (boxOne == "X" && boxFive == "X" && boxNine == "X") ||
@@ -224,7 +225,8 @@ $(document).ready(function () {
                 $(".message").text("Player One won !!");
                 player1++;
                 $(".scorePlayerOne ").text(player1);
-
+                $(".resultAnimation").addClass("resultDisplay");
+                $(".tableHide").hide();
                 cross = [];
 
             } else if ((boxOne == "O" && boxTwo == "O" && boxThree == "O") ||
@@ -237,32 +239,35 @@ $(document).ready(function () {
                 (boxSeven == "O" && boxEight == "O" && boxNine == "O")) {
                 $(".message").text("Player Two won !!");
                 player2++;
-
+                $(".tableHide").hide();
                 $(".scorePlayerTwo").text(player2);
+                $(".resultAnimation").addClass("resultDisplay");
                 cross = [];
                
 
             } else if (cross.length == 0) {
                 $(".message").text("This is a draw !!");
+                $(".resultAnimation").addClass("resultDisplay");
                 cross = [];
-                
+                $(".tableHide").hide();
             }
 
         }
 
         $("#one").click(function (event) {
 
-            if (!$("#one ").is(':empty')) {
+            if (!$("#one h2").is(':empty')) {
                 return;
             }
-            $("#one ").text("X");
-            $("#one ").css("color", "blue");
+            $("#one h2").text("X");
+            $("#one h2").css("color", "blue");
             var indexOne = cross.indexOf("#one");
             cross.splice(indexOne, 1);
             check();
             var randomVal = cross[Math.floor(Math.random() * cross.length)];
-            $(randomVal).css("color", red);
-            $(randomVal).text("O");
+       
+            $(randomVal +" h2").css("color", "red");
+            $(randomVal +" h2").text("O");
             var indexRand = cross.indexOf(randomVal);
             cross.splice(indexRand, 1);
 
@@ -270,36 +275,36 @@ $(document).ready(function () {
         });
 
         $("#two").click(function () {
-            if (!$("#two ").is(':empty')) {
+            if (!$("#two h2").is(':empty')) {
 
                 return;
             }
-            $("#two ").text("X");
-            $("#two ").css("color", "blue");
+            $("#two h2").text("X");
+            $("#two h2").css("color", "blue");
             var indexTwo = cross.indexOf("#two");
             cross.splice(indexTwo, 1);
             check();
             var randomVal2 = cross[Math.floor(Math.random() * cross.length)];
-            $(randomVal2).css("color", "red");
-            $(randomVal2).text("O");
+            $(randomVal2+" h2").css("color", "red");
+            $(randomVal2+" h2").text("O");
             var indexRand2 = cross.indexOf(randomVal2);
             cross.splice(indexRand2, 1);
             check();
 
         });
         $("#three").click(function (event) {
-            if (!$("#three ").is(':empty')) {
+            if (!$("#three h2").is(':empty')) {
 
                 return;
             }
-            $("#three ").css("color", "blue");
-            $("#three ").text("X");
+            $("#three h2").css("color", "blue");
+            $("#three h2").text("X");
             check();
             var indexThree = cross.indexOf("#three");
             cross.splice(indexThree, 1);
             var randomVal3 = cross[Math.floor(Math.random() * cross.length)];
-            $(randomVal3).css("color", "red");
-            $(randomVal3).text("O");
+            $(randomVal3+" h2").css("color", "red");
+            $(randomVal3+" h2").text("O");
 
             var indexRand3 = cross.indexOf(randomVal3);
             cross.splice(indexRand3, 1);
@@ -308,38 +313,38 @@ $(document).ready(function () {
         });
 
         $("#four").click(function (event) {
-            if (!$("#four ").is(':empty')) {
+            if (!$("#four h2").is(':empty')) {
 
                 return;
             }
-            $("#four").css("color", "blue");
-            $("#four ").text("X");
+            $("#four h2").css("color", "blue");
+            $("#four h2").text("X");
 
             var indexFour = cross.indexOf("#four");
             cross.splice(indexFour, 1);
             check();
             var randomVal4 = cross[Math.floor(Math.random() * cross.length)];
-            $(randomVal4).css("color", "red");
-            $(randomVal4).text("O");
+            $(randomVal4+" h2").css("color", "red");
+            $(randomVal4+" h2").text("O");
 
             var indexRand4 = cross.indexOf(randomVal4);
             cross.splice(indexRand4, 1);
             check();
         });
         $("#five").click(function (event) {
-            if (!$("#five ").is(':empty')) {
+            if (!$("#five h2").is(':empty')) {
 
                 return;
             }
-            $("#five ").css("color", "blue");
-            $("#five ").text("X");
+            $("#five h2").css("color", "blue");
+            $("#five h2").text("X");
 
             var indexFive = cross.indexOf("#five");
             cross.splice(indexFive, 1);
             check();
             var randomVal5 = cross[Math.floor(Math.random() * cross.length)];
-            $(randomVal5).css("color", "red")
-            $(randomVal5).text("O");
+            $(randomVal5+" h2").css("color", "red")
+            $(randomVal5+" h2").text("O");
 
             var indexRand5 = cross.indexOf(randomVal5);
             cross.splice(indexRand5, 1);
@@ -347,19 +352,19 @@ $(document).ready(function () {
 
         });
         $("#six").click(function (event) {
-            if (!$("#six ").is(':empty')) {
+            if (!$("#six h2").is(':empty')) {
 
                 return;
             }
-            $("#six ").css("color", "blue");
-            $("#six ").text("X");
+            $("#six h2").css("color", "blue");
+            $("#six h2").text("X");
 
             var indexSix = cross.indexOf("#six");
             cross.splice(indexSix, 1);
             check();
             var randomVal6 = cross[Math.floor(Math.random() * cross.length)];
-            $(randomVal6).css("color", "red");
-            $(randomVal6).text("O");
+            $(randomVal6+" h2").css("color", "red");
+            $(randomVal6+" h2").text("O");
 
             var indexRand6 = cross.indexOf(randomVal6);
             cross.splice(indexRand6, 1);
@@ -367,19 +372,19 @@ $(document).ready(function () {
             check();
         });
         $("#seven").click(function (event) {
-            if (!$("#seven").is(':empty')) {
+            if (!$("#seven h2").is(':empty')) {
 
                 return;
             }
-            $("#seven ").css("color", "blue");
-            $("#seven").text("X");
+            $("#seven h2").css("color", "blue");
+            $("#seven h2").text("X");
 
             var indexSeven = cross.indexOf("#seven");
             cross.splice(indexSeven, 1);
             check();
             var randomVal7 = cross[Math.floor(Math.random() * cross.length)];
-            $(randomVal7).css("color", "red");
-            $(randomVal7).text("O");
+            $(randomVal7+" h2").css("color", "red");
+            $(randomVal7+" h2").text("O");
 
             var indexRand7 = cross.indexOf(randomVal7);
             cross.splice(indexRand7, 1);
@@ -387,19 +392,19 @@ $(document).ready(function () {
             check();
         });
         $("#eight").click(function (event) {
-            if (!$("#eight").is(':empty')) {
+            if (!$("#eight h2").is(':empty')) {
 
                 return;
             }
-            $("#eight ").css("color", "blue");
-            $("#eight ").text("X");
+            $("#eight h2").css("color", "blue");
+            $("#eight h2").text("X");
 
             var indexEight = cross.indexOf("#eight");
             cross.splice(indexEight, 1);
             check();
             var randomVal8 = cross[Math.floor(Math.random() * cross.length)];
-            $(randomVal8).css("color", "red");
-            $(randomVal8).text("O");
+            $(randomVal8+" h2").css("color", "red");
+            $(randomVal8+" h2").text("O");
 
             var indexRand8 = cross.indexOf(randomVal8);
             cross.splice(indexRand8, 1);
@@ -408,19 +413,19 @@ $(document).ready(function () {
         });
 
         $("#nine").click(function (event) {
-            if (!$("#nine ").is(':empty')) {
+            if (!$("#nine h2").is(':empty')) {
 
                 return;
             }
-            $("#nine ").css("color", "blue");
-            $("#nine ").text("X");
+            $("#nine h2").css("color", "blue");
+            $("#nine h2").text("X");
 
             var indexNine = cross.indexOf("#nine");
             cross.splice(indexNine, 1);
             check();
             var randomVal9 = cross[Math.floor(Math.random() * cross.length)];
-            $(randomVal9).css("color", "red");
-            $(randomVal9).text("O");
+            $(randomVal9+" h2").css("color", "red");
+            $(randomVal9+" h2").text("O");
 
             var indexRand9 = cross.indexOf(randomVal9);
             cross.splice(indexRand9, 1);
@@ -437,18 +442,18 @@ $(document).ready(function () {
 
         $(".resetBoard").click(function () {
             cross = ["#one", "#two", "#three", "#four", "#five", "#six", "#seven", "#eight", "#nine"];
-            $("#one ").text("");
-            $("#two ").text("");
-            $("#three ").text("");
-            $("#four ").text("");
-            $("#five ").text("");
-            $("#six ").text("");
-            $("#seven ").text("");
-            $("#eight ").text("");
-            $("#nine ").text("");
+            $("#one h2").text("");
+            $("#two h2").text("");
+            $("#three h2").text("");
+            $("#four h2").text("");
+            $("#five h2").text("");
+            $("#six h2").text("");
+            $("#seven h2").text("");
+            $("#eight h2").text("");
+            $("#nine h2").text("");
             $(".message").text("");
-
-           
+            $(".tableHide").show();
+            $(".resultAnimation").removeClass("resultDisplay");
         });
     }
 
